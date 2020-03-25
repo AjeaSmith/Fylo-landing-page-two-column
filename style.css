@@ -65,6 +65,7 @@ header nav ul li{
     grid-template-areas: "image"
                          "content";
     row-gap: 0.8em;
+    margin-bottom: 3em;
 }
 .hero .hero_image{
     grid-area: "image";
@@ -139,9 +140,9 @@ header nav ul li{
     margin-left: 0.2em;
 }
 .testimonal .testimonal_content .testimonal_box{
+    width: 350px;
     background: white;
-    margin-top:3em;
-    margin-bottom: 5em;
+    margin: 3em auto;
     border-radius: 5px;
     padding: 1.5em;
     -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
@@ -335,6 +336,63 @@ footer p.attribute{
         text-align: left;
     }
 }
+@media screen and (min-width:1000px){
+    .testimonal{
+        padding: 7em 0;
+        height: 730px;
+        grid-template-areas: "content image";
+        grid-template-columns: 550px auto;
+    }
+    .testimonal .testimonal_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .testimonal .testimonal_content h1{
+        text-align: left;
+        font-size: 1.8em;
+    }
+    .testimonal .testimonal_content p{
+        margin-bottom: 0.5em;
+    }
+    .testimonal .testimonal_content p.linkstyle{
+        margin: 0;
+    }
+    .testimonal .testimonal_content .testimonal_box{
+        max-width: 324px;
+        margin:2em 0;
+    }
+    .testimonal .testimonal_image{
+        display: flex;
+        align-items: baseline;
+        padding: 0;
+    }
+    .testimonal .testimonal_image img{
+        max-width: 90%;
+    }
+    .newsletter{
+        height: 200px;
+        grid-template-areas:"content form";
+        grid-template-columns: 400px auto;
+        column-gap: 2em;
+    }
+    .newsletter .newsletter_content{
+        text-align: left;
+    }
+    .newsletter .newsletter_form{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .newsletter .newsletter_form input{
+        width: 70%;
+    }
+    .newsletter .newsletter_form button.btn{
+        width:155px;
+        margin: 1em 0;
+    }
+}
 @media screen and (min-width: 1024px){
     header{
         margin-bottom: 3em;
@@ -372,33 +430,48 @@ footer p.attribute{
     }
     .testimonal .testimonal_image{
         display: flex;
-        align-items: center;
-        height: 100%;
+        align-items: baseline;
         padding: 0;
     }
     .testimonal .testimonal_image img{
-        width: 100%;
-        height: 80%;
+        max-width: 100%;
     }
-    .newsletter{
-        height: 200px;
-        grid-template-areas:"content form";
-        grid-template-columns: 400px auto;
-        column-gap: 2em;
+    footer{
+        grid-template-areas: "topmenu middlemenu endmenu";
+        grid-template-rows: 300px auto;
+        grid-template-columns: 320px auto 158px;
+        grid-template-rows: 270px;
+        row-gap: 1em;
     }
-    .newsletter .newsletter_content{
-        text-align: left;
-    }
-    .newsletter .newsletter_form{
-        display: flex;
+    footer .top_menu ul{
         justify-content: center;
+    }
+    footer .top_menu ul li{
+        margin-bottom: 1em;
+    }
+    footer .middle_menu{
+        width:100%;
+        display:flex;
         align-items: flex-end;
+        justify-content: space-evenly;
     }
-    .newsletter .newsletter_form input{
-        width: 70%;
+    footer .middle_menu ul{
+        display: flex;
+        width:40%;
     }
-    .newsletter .newsletter_form button.btn{
-        width:155px;
-        margin: 1em 0;
+    footer .end_menu{
+        height: 100%;  
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    footer .end_menu ul{
+        height:50%;
+        align-items: flex-start;
+    }
+    footer p.attribution{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
