@@ -163,7 +163,7 @@ header nav ul li{
     align-items: center;
 }
 .testimonal .testimonal_content .avatar img{
-    width:48px;
+    width:45px;
     border-radius: 50%;
     margin-right: 0.8em;
 }
@@ -264,4 +264,120 @@ footer .end_menu ul li i{
 }
 footer p.attribute{
     grid-area: coderlink;
+}
+
+/* Media queries */
+@media screen and (min-width: 568px){
+    .testimonal .testimonal_content, header, .hero, .newsletter, footer{
+    padding: 1em;
+    }
+}
+@media screen and (min-width: 676px){
+    header{
+        margin-bottom: 2em;
+    }
+    header, .hero, .testimonal .testimonal_content, .newsletter, footer{
+        padding: 2em;
+    }
+    .hero{
+        margin-bottom: 5em;
+    }
+    .hero .hero_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+    .hero .hero_content .hero_form{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .hero .hero_content .hero_form input{
+        height:41px;
+        margin-right: 0.5em;
+        max-width: 50%;
+    }
+    .hero .hero_content .hero_form button{
+        width: 40%;
+    }
+    .testimonal{
+        row-gap: 1.5em;
+    }
+    .testimonal .testimonal_content .testimonal_box{
+        margin: 2.5em auto;
+        max-width:400px;
+        padding: 1.2em;
+    }
+    .newsletter{
+        grid-template-rows: 120px 80px;
+        height: 280px;
+    }
+    .newsletter .newsletter_content{
+        padding: 0;
+    }
+    .newsletter .newsletter_form{
+        display: flex;
+        align-items: center;
+    }
+    .newsletter .newsletter_form button{
+        text-align: center;
+        margin-left: 0.5em;
+        height: 34px;
+        padding:0;
+    }
+}
+@media screen and (min-width: 767px){
+    .hero{
+        grid-template-areas: "content image";
+        grid-template-columns: 1fr 1fr;
+    }
+    .hero .hero_content{
+        text-align: left;
+    }
+}
+@media screen and (min-width: 1024px){
+    header{
+        margin-bottom: 3em;
+    }
+    .hero{
+        margin-bottom: 4em;
+    }
+    .hero .hero_content h1{
+        font-size: 1.8em;
+    }
+    .testimonal{
+        padding: 7em 0;
+        height: 730px;
+        grid-template-areas: "content image";
+        grid-template-columns: 550px auto;
+    }
+    .testimonal .testimonal_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .testimonal .testimonal_content h1{
+        text-align: left;
+        font-size: 1.8em;
+    }
+    .testimonal .testimonal_content p{
+        margin-bottom: 0.5em;
+    }
+    .testimonal .testimonal_content p.linkstyle{
+        margin: 0;
+    }
+    .testimonal .testimonal_content .testimonal_box{
+        max-width: 324px;
+        margin:2em 0;
+    }
+    .testimonal .testimonal_image{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0;
+    }
+    .testimonal .testimonal_image img{
+        width: 100%;
+        height: 85%;
+    }
 }
