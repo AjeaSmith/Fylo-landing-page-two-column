@@ -395,16 +395,28 @@ footer p.attribute{
 }
 @media screen and (min-width: 1024px){
     header{
-        margin-bottom: 3em;
+        margin-bottom: 6em;
+        padding: 3em 4em;
+    }
+    header nav ul li{
+        margin-left:2em;
     }
     .hero{
         margin-bottom: 4em;
+        padding: 0 4em;
+    }
+    .hero .hero_image{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .hero .hero_image img{
+        width:75%;
     }
     .hero .hero_content h1{
         font-size: 1.8em;
     }
     .testimonal{
-        padding: 7em 0;
+        padding: 7em 2em;
         height: 730px;
         grid-template-areas: "content image";
         grid-template-columns: 550px auto;
@@ -434,7 +446,13 @@ footer p.attribute{
         padding: 0;
     }
     .testimonal .testimonal_image img{
-        max-width: 100%;
+        width: 100%;
+    }
+    .newsletter{
+        padding: 2em 4em;
+    }
+    .newsletter .newsletter_form button.btn{
+        width:220px;
     }
     footer{
         grid-template-areas: "topmenu middlemenu endmenu";
@@ -442,6 +460,7 @@ footer p.attribute{
         grid-template-columns: 320px auto 158px;
         grid-template-rows: 270px;
         row-gap: 1em;
+        padding: 1.5em 4em;
     }
     footer .top_menu ul{
         justify-content: center;
